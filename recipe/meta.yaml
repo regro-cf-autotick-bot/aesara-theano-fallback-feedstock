@@ -1,5 +1,5 @@
 {% set name = "aesara-theano-fallback" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aesara_theano_fallback-{{ version }}.tar.gz
-  sha256: 2076a1a8efef3395a90490af1287611d3350ef961ac9e51f470d16033647b8ad
+  sha256: fd4b0dd4848f0380c616e8e8a20566aa21b33a5f504ee9a0461cacf3f14dac5a
 
 build:
   number: 0
