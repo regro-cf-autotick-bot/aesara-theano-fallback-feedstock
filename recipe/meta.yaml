@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aesara_theano_fallback-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aesara_theano_fallback-{{ version }}.tar.gz
   sha256: f76208ce55de7ca8c069896bd4755096c48c9eaeef6785621f9f20aec9c3b2eb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
     - aesara
+    - python {{ python_min }}
 
 about:
   home: https://github.com/exoplanet-dev/aesara-theano-fallback
